@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<section>
+  <h1>{{book.title}}</h1>
+  <h4>author: {{book.author}}</h4>
+  <p>{{book.owner}}</p>
+  <a href="{% url 'update_book' book.pk %}">Make a change to this book</a>
+  <a href="{% url 'delete_book' book.pk %}">Get rid of this book</a>
+</section>
+
+{% endblock %}
